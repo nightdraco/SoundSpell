@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://opendyslexic.org/core/OpenDyslexic-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dyslexicText {
+  font-family: 'OpenDyslexic', sans-serif;
+}
+
+.highContrastContainer {
+  background-color: #121212;
+  border: 4px solid #FFFF00;
+  color: #FFFF00;
+}
+
+.highContrastInput {
+  background-color: #222222;
+  color: #FFFF00;
+  border: 2px solid #FFFF00;
+}
+
+.highContrastInput::placeholder {
+  color: #AAAA00;
+}
+
+.highContrastButton {
+  background-color: #FFFF00;
+  color: #000000;
+  font-weight: bold;
+}
+
+.highContrastButton:hover {
+  background-color: #CCCC00;
+}
+
+.highContrastCard {
+  background-color: #000000;
+  border: 4px solid #00FFFF;
+  color: #00FFFF;
+}
+
+.highContrastIcon {
+  color: #000000;
+}
+
+.wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+}
+
+.starsContainer {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.star {
+  color: #FFFF00;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}

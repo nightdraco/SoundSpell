@@ -1,18 +1,15 @@
-.venv
-venv/
-env/
+# Node.js
+**/node_modules/
 
-.env
-.prod
-.dev
+# Python
+**/__pycache__/
 
-.db
+.venv/
 
-.DS_Store
+.next/
+ui/.next/
+/node_modules/
 
-.cache
-.next
-skills-lock.json
-package-lock.json
+./ui/package-lock.json
 
-blueprint.md
+*.md

@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: soundspell_db
+    restart: always
+    environment:
+      POSTGRES_USER: soundspell_user
+      POSTGRES_PASSWORD: soundspell_password
+      POSTGRES_DB: soundspell_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  spell_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: soundspell_backend
+    ports:
+      - "8000:8000"
+    environment:
+      # This allows your Python app to connect to the Postgres container
+      - DATABASE_URL=postgresql://soundspell_user:soundspell_password@db:5432/soundspell_db
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    container_name: soundspell_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - spell_api
+    volumes:
+      - ./ui:/app
+      - /app/node_modules # Prevents local node_modules from overwriting the container's
+
+volumes:
+  postgres_data:

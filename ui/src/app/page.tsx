@@ -16,7 +16,7 @@ export default function Home() {
           <span className="ml-2 text-xl font-headline font-bold text-primary">SoundSpell Academy</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/auth?role=student">
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="/student">
             Student Login
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/auth?role=parent">
@@ -38,7 +38,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link href="/auth?role=student">
+                  <Link href="/student">
                     <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-8 text-lg font-headline">
                       Start Learning
                     </Button>
