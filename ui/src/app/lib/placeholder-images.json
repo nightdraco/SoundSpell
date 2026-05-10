@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Happy children learning phonics with colorful letters",
+      "imageUrl": "https://picsum.photos/seed/soundspell-hero/1200/600",
+      "imageHint": "education children"
+    },
+    {
+      "id": "lesson-alphabet",
+      "description": "Colorful alphabet blocks",
+      "imageUrl": "https://picsum.photos/seed/alphabet/400/300",
+      "imageHint": "alphabet toys"
+    },
+    {
+      "id": "lesson-vowels",
+      "description": "Vowel sounds illustrated",
+      "imageUrl": "https://picsum.photos/seed/vowels/400/300",
+      "imageHint": "vowels letters"
+    },
+    {
+      "id": "student-avatar",
+      "description": "Friendly cartoon mascot",
+      "imageUrl": "https://picsum.photos/seed/mascot/200/200",
+      "imageHint": "cartoon character"
+    }
+  ]
+}
